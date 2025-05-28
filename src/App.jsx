@@ -43,7 +43,7 @@ function App() {
     }, 400),
     [getMovies]
   );
-  
+
   const handleSubmit = (event) => {
     event.preventDefault();
     getMovies({ search });
@@ -56,7 +56,7 @@ function App() {
   const handleChange = (event) => {
     const newSearch = event.target.value;
     updateSearch(newSearch);
-    debounceGetMovies({ newSearch });
+    debounceGetMovies(newSearch);
   };
 
   return (

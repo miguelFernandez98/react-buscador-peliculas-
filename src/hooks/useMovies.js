@@ -11,6 +11,7 @@ export function useMovies({ search, sort }) {
   // useCallback permite memorizar la función para que no se vuelva a crear en cada renderizado
   const getMovies = useCallback(async ({ search }) => {
     if (search === previousSearch.current) return;
+/*     console.log("prueba", search); */
     try {
       setLoading(true);
       setError(null);
